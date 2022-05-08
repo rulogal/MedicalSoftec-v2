@@ -452,3 +452,30 @@ p, span {
     gap: 0.5rem;
   }
 }
+.hero {
+  padding: 0 clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+  height: clamp(22rem, 11rem + 48.8889vw, 55rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero__title {
+  padding-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
+  padding-right: clamp(1.87rem, 0.39rem + 6.5778vw, 6.31rem);
+  line-height: clamp(2rem, -0.3333rem + 10.3704vw, 9rem);
+}
+.hero__text {
+  padding-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
+  width: clamp(14rem, 6.3333rem + 34.0741vw, 37rem);
+  padding-bottom: clamp(0.5rem, 0.3333rem + 0.7407vw, 1rem);
+}
+.hero__btn {
+  margin-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
+  width: clamp(13rem, 10.1667rem + 12.5926vw, 21.5rem);
+  height: clamp(3rem, 2.5rem + 2.2222vw, 4.5rem);
+  color: white;
+  background-color: #1A27C9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
