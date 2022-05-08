@@ -54,7 +54,6 @@
 }
 .equipo {
   padding: clamp(4rem, 2rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
-  padding-bottom: clamp(7rem, 5.8767rem + 4.9926vw, 10.37rem);
 }
 .equipo__top {
   padding-bottom: clamp(1.5rem, 0.5rem + 4.4444vw, 4.5rem);
@@ -68,7 +67,7 @@
 }
 .equipo__profile {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 26.94rem));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: clamp(1.75rem, 0.8333rem + 4.0741vw, 4.5rem);
   padding: 0 clamp(0rem, -2.56rem + 11.3778vw, 7.68rem);
 }
@@ -86,4 +85,23 @@
 .equipo .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.equipo .card Marquee {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .equipo__profile {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 658px) {
+  .equipo__profile {
+    grid-template-columns: 1fr;
+  }
+  .equipo .card Marquee {
+    display: flex;
+    justify-content: right;
+  }
 }
