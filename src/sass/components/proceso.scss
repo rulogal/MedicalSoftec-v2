@@ -2,5 +2,5 @@
 @use "../base/font-faces" as ff;
 
 .proceso{
-    
+    padding: clamp(4rem, 2.0000rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
 }
