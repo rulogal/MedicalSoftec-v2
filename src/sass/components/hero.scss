@@ -2,16 +2,20 @@
 @use "../base/font-faces" as ff;
 
 .hero{
+    background-image: url(/src/assets/img/fondo.png);
+    background-size: cover;    
     padding: 0 clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
     height: clamp(22rem, 11.0000rem + 48.8889vw, 55rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
+    color: white;
 
     &__title{
         padding-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
         padding-right: clamp(1.87rem, 0.3900rem + 6.5778vw, 6.31rem);
         line-height: clamp(2rem, -0.3333rem + 10.3704vw, 9rem);
+        width: clamp(18.13rem, -4.9933rem + 102.7704vw, 87.5rem);
     }
 
     &__text{
