@@ -64,6 +64,7 @@
 }
 .footer__form {
   padding-top: clamp(2.06rem, 0.52rem + 6.8444vw, 6.68rem);
+  padding-bottom: clamp(4rem, 0.25rem + 16.6667vw, 9rem);
   max-width: 1450px;
 }
 .footer__form__elements {
@@ -103,10 +104,12 @@
   height: 5rem;
 }
 .footer__info {
-  padding-top: clamp(4rem, 0.25rem + 16.6667vw, 9rem);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 32rem));
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(1rem, -2rem + 13.3333vw, 10rem);
+  gap: clamp(1rem, 0.3333rem + 2.963vw, 3rem);
 }
 .footer__info__text {
   font-size: 1rem;
@@ -121,7 +124,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .footer__info__redes {
@@ -131,11 +133,16 @@
   gap: 0.5rem;
 }
 .footer__info__redes__img {
-  max-width: 1.55rem;
+  max-width: 1.5rem;
 }
 
 @media screen and (max-width: 815px) {
-  .footer__info__dir, .footer__info__redes {
+  .footer__info {
+    flex-direction: column;
+  }
+  .footer__info__politicas, .footer__info__dir, .footer__info__redes {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: left;
   }
 }

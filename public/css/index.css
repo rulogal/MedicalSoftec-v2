@@ -289,6 +289,7 @@ p, span {
 }
 .footer__form {
   padding-top: clamp(2.06rem, 0.52rem + 6.8444vw, 6.68rem);
+  padding-bottom: clamp(4rem, 0.25rem + 16.6667vw, 9rem);
   max-width: 1450px;
 }
 .footer__form__elements {
@@ -328,10 +329,12 @@ p, span {
   height: 5rem;
 }
 .footer__info {
-  padding-top: clamp(4rem, 0.25rem + 16.6667vw, 9rem);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 32rem));
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(1rem, -2rem + 13.3333vw, 10rem);
+  gap: clamp(1rem, 0.3333rem + 2.963vw, 3rem);
 }
 .footer__info__text {
   font-size: 1rem;
@@ -346,7 +349,6 @@ p, span {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .footer__info__redes {
@@ -356,11 +358,16 @@ p, span {
   gap: 0.5rem;
 }
 .footer__info__redes__img {
-  max-width: 1.55rem;
+  max-width: 1.5rem;
 }
 
 @media screen and (max-width: 815px) {
-  .footer__info__dir, .footer__info__redes {
+  .footer__info {
+    flex-direction: column;
+  }
+  .footer__info__politicas, .footer__info__dir, .footer__info__redes {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: left;
   }
 }
@@ -453,16 +460,20 @@ p, span {
   }
 }
 .hero {
+  background-image: url(/src/assets/img/fondo.png);
+  background-size: cover;
   padding: 0 clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
   height: clamp(22rem, 11rem + 48.8889vw, 55rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
 }
 .hero__title {
   padding-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
   padding-right: clamp(1.87rem, 0.39rem + 6.5778vw, 6.31rem);
   line-height: clamp(2rem, -0.3333rem + 10.3704vw, 9rem);
+  width: clamp(18.13rem, -4.9933rem + 102.7704vw, 87.5rem);
 }
 .hero__text {
   padding-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
@@ -478,4 +489,54 @@ p, span {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.proyectos {
+  padding: clamp(4rem, 2rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+  display: flex;
+  flex-direction: column;
+}
+.proyectos__view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(1rem, -0.1667rem + 5.1852vw, 4.5rem);
+  padding-top: clamp(2rem, 1.5433rem + 2.0296vw, 3.37rem);
+}
+.proyectos__view__img {
+  width: 55%;
+}
+.proyectos__view__img__2, .proyectos__view__img__3 {
+  display: none;
+}
+.proyectos__view__info {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.proyectos__view__info__element1, .proyectos__view__info__element2, .proyectos__view__info__element3 {
+  border-bottom: 1px solid #C0C4CD;
+  height: clamp(5.93rem, 4.99rem + 4.1778vw, 8.75rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(3.81rem, 1.79rem + 8.9778vw, 9.87rem);
+  line-height: 1rem;
+}
+.proyectos__view__info__element1:hover, .proyectos__view__info__element2:hover, .proyectos__view__info__element3:hover {
+  background-color: #1A27C9;
+  color: white;
+}
+
+@media screen and (max-width: 658px) {
+  .proyectos__view {
+    flex-direction: column;
+  }
+  .proyectos__view__img {
+    width: 80%;
+  }
+  .proyectos__view__info {
+    width: 80%;
+  }
 }

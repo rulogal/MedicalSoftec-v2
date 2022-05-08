@@ -3,6 +3,67 @@
 
 .proyectos{
 
-    //
+    padding: clamp(4rem, 2rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+    display: flex;
+    flex-direction: column;
 
+    &__view{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: clamp(1rem, -0.1667rem + 5.1852vw, 4.5rem);
+        padding-top: clamp(2rem, 1.5433rem + 2.0296vw, 3.37rem);
+
+        &__img{
+            width: 55%;
+
+            &__2, &__3{
+                display: none;
+            }
+        }
+
+        &__info{
+            display: flex;
+            flex-direction: column;
+            width: 45%;           
+
+            &__element1, &__element2, &__element3{
+                border-bottom: 1px solid c.$color-neutral-40;
+                height: clamp(5.93rem, 4.9900rem + 4.1778vw, 8.75rem);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: clamp(3.81rem, 1.7900rem + 8.9778vw, 9.87rem);
+                line-height: 1rem;
+            }
+
+             &__element1:hover, &__element2:hover, &__element3:hover{
+                background-color: c.$color-blue-50;
+                color: white;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 658px) {
+    .proyectos{
+
+        &__view{
+
+            flex-direction: column;
+            
+            &__img{
+                width: 80%;
+            }
+
+            &__info{
+                width: 80%;
+            }
+
+        }
+    }
 }
