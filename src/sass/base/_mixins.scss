@@ -1,0 +1,7 @@
+/* Mixins responsive */
+@mixin responsive ( $medida ) {
+    //480 - 960 - 1328
+    @media screen and (min-width: $medida) {
+        @content;
+    }
+}

@@ -1,0 +1,45 @@
+@use "colors" as c;
+@use "font-faces" as ff;
+
+
+ /* Declaracion de fuentes */
+ $text-font: Poppins, sans-serif;
+ $titles-fonts: Cardo, serif;
+
+$Thunder-BlackLc:"Thunder-BlackLc" , san-serif;
+$Thunder-ExtraBoldLc:"Thunder-ExtraBoldLc" , san-serif;
+$Thunder-Lc:"Thunder-Lc" , san-serif;
+$Thunder-LightLc:"Thunder-LightLc" , san-serif;
+
+body {
+    min-height  : 100vh;
+    font-size: 100%;    
+    color: #000000;    
+    /* opcional */ line-height: 1.7;
+    /* opcional */ hyphens: auto;
+    /* opcional */ font-smooth: always;
+    /* opcional */ -webkit-font-smoothing: antialiased;
+    /* opcional */ -moz-osx-font-smoothing: grayscale;
+    }
+
+h1{
+    font-family: $Thunder-BlackLc;
+    font-size: clamp(1.84375rem, -0.1458rem + 8.8426vw, 7.8125rem);
+}
+
+h2{
+    font-family: $Thunder-ExtraBoldLc;
+    font-size: clamp(1.6875rem, 0.1667rem + 6.7593vw, 6.25rem);
+}
+
+h3{
+    font-family: $Thunder-Lc;
+    font-size: clamp(1.375rem, 0.5833rem + 3.5185vw, 3.75rem);
+    
+}
+
+p, span{
+    font-family: $Thunder-LightLc;
+    font-size: clamp(0.875rem, 0.7500rem + 0.5556vw, 1.25rem);
+    
+}

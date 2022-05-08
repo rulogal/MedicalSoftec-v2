@@ -1,0 +1,89 @@
+/* EL ESTILO ES MINIMALISTA, POR ESTA RAZON UTILIZAMOS COMO BASE LOS COLORES DE BLANCO Y NEGRO PUROS Y 
+   NOS APOYAMOS DEL AZUL COMO COLOR DE CONTRASTE
+*/
+/* BASE COLORS */
+/* BLUE COLORS */
+/* NEUTRAL COLORS */
+@font-face {
+  font-family: "Thunder-BlackLc";
+  src: url("/src/assets/fonts/Thunder-BlackLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-BlackLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-BoldLc";
+  src: url("/src/assets/fonts/Thunder-BoldLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-BoldLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-ExtraBoldLc";
+  src: url("/src/assets/fonts/Thunder-ExtraBoldLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-ExtraBoldLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-Lc";
+  src: url("/src/assets/fonts/Thunder-LC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-LC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-LightLc";
+  src: url("/src/assets/fonts/Thunder-LightLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-LightLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-MediumLc";
+  src: url("/src/assets/fonts/Thunder-MediumLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-MediumLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-SemiBoldLc";
+  src: url("/src/assets/fonts/Thunder-SemiBoldLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-SemiBoldLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-ThinLc";
+  src: url("/src/assets/fonts/Thunder-ThinLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-ThinLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.equipo {
+  padding: clamp(4rem, 2rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+  padding-bottom: clamp(7rem, 5.8767rem + 4.9926vw, 10.37rem);
+}
+.equipo__top {
+  padding-bottom: clamp(1.5rem, 0.5rem + 4.4444vw, 4.5rem);
+}
+.equipo__top__title {
+  line-height: 2rem;
+}
+.equipo__top__texto {
+  padding-top: clamp(0.8rem, 0.2333rem + 2.5185vw, 2.5rem);
+  width: clamp(14.87rem, 7.37rem + 33.3333vw, 37.37rem);
+}
+.equipo__profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 26.94rem));
+  gap: clamp(1.75rem, 0.8333rem + 4.0741vw, 4.5rem);
+  padding: 0 clamp(0rem, -2.56rem + 11.3778vw, 7.68rem);
+}
+.equipo__profile img {
+  width: clamp(14.87rem, 13.87rem + 4.4444vw, 17.87rem);
+}
+.equipo__profile__name {
+  padding-top: clamp(1.93rem, 1.7633rem + 0.7407vw, 2.43rem);
+  line-height: clamp(1rem, 0.3333rem + 2.963vw, 3rem);
+}
+.equipo__profile__desc {
+  color: #1A27C9;
+  width: clamp(15rem, 14rem + 4.4444vw, 18rem);
+}
+.equipo .card {
+  display: flex;
+  flex-direction: column;
+}

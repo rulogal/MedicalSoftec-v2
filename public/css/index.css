@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  object-fit: cover;
+  /* opcional */
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::selection {
+  background-color: black;
+  color: white;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  /* opcional */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* EL ESTILO ES MINIMALISTA, POR ESTA RAZON UTILIZAMOS COMO BASE LOS COLORES DE BLANCO Y NEGRO PUROS Y 
+   NOS APOYAMOS DEL AZUL COMO COLOR DE CONTRASTE
+*/
+/* BASE COLORS */
+/* BLUE COLORS */
+/* NEUTRAL COLORS */
+@font-face {
+  font-family: "Thunder-BlackLc";
+  src: url("/src/assets/fonts/Thunder-BlackLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-BlackLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-BoldLc";
+  src: url("/src/assets/fonts/Thunder-BoldLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-BoldLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-ExtraBoldLc";
+  src: url("/src/assets/fonts/Thunder-ExtraBoldLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-ExtraBoldLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-Lc";
+  src: url("/src/assets/fonts/Thunder-LC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-LC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-LightLc";
+  src: url("/src/assets/fonts/Thunder-LightLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-LightLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-MediumLc";
+  src: url("/src/assets/fonts/Thunder-MediumLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-MediumLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-SemiBoldLc";
+  src: url("/src/assets/fonts/Thunder-SemiBoldLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-SemiBoldLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Thunder-ThinLc";
+  src: url("/src/assets/fonts/Thunder-ThinLC.woff2") format("woff2"), url("/src/assets/fonts/Thunder-ThinLC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Declaracion de fuentes */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  color: #000000;
+  /* opcional */
+  line-height: 1.7;
+  /* opcional */
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: "Thunder-BlackLc", san-serif;
+  font-size: clamp(1.84375rem, -0.1458rem + 8.8426vw, 7.8125rem);
+}
+
+h2 {
+  font-family: "Thunder-ExtraBoldLc", san-serif;
+  font-size: clamp(1.6875rem, 0.1667rem + 6.7593vw, 6.25rem);
+}
+
+h3 {
+  font-family: "Thunder-Lc", san-serif;
+  font-size: clamp(1.375rem, 0.5833rem + 3.5185vw, 3.75rem);
+}
+
+p, span {
+  font-family: "Thunder-LightLc", san-serif;
+  font-size: clamp(0.875rem, 0.75rem + 0.5556vw, 1.25rem);
+}
+
+/* Mixins responsive */
+.nav {
+  padding: 0 clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+  border-bottom: 1px solid #D0D3DA;
+  height: clamp(1.75rem, 1.1458rem + 2.6852vw, 3.5625rem);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+.nav__brand {
+  padding-left: clamp(1.875rem, 0.3333rem + 6.8519vw, 6.5rem);
+}
+.nav__brand__text {
+  font-size: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem);
+  font-family: "MediumLc", san-serif;
+  font-weight: bold;
+}
+.nav__links {
+  font-size: clamp(0.875rem, 0.8333rem + 0.1852vw, 1rem);
+  padding-right: clamp(1.875rem, -0.8333rem + 12.037vw, 10rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+.nav__link1, .nav__link2 {
+  margin-right: 1.5rem;
+}
+.nav__toggle, .nav__x {
+  display: none;
+}
+
+@media screen and (max-width: 815px) {
+  .nav {
+    grid-template-columns: 82% 20%;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__toggle {
+    display: flex;
+  }
+  .nav__mobile {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #1A27C9;
+  }
+  .nav__mobile__links {
+    font-size: 2rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .nav__mobile__lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+  }
+  .nav__mobile__lines__1 {
+    max-width: 1.5rem;
+    height: 0.125rem;
+    margin-bottom: 0.27rem;
+    background-color: #000000;
+  }
+  .nav__mobile__lines__2 {
+    max-width: 1rem;
+    height: 0.125rem;
+    background-color: #000000;
+  }
+  .nav__mobile__linesX {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    position: fixed;
+    top: 14px;
+    right: 52px;
+  }
+  .nav__mobile__linesX__1 {
+    width: 1rem;
+    height: 0.125rem;
+    background-color: #ffffff;
+    transform: translate3d(0px, 2px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+  }
+  .nav__mobile__linesX__2 {
+    width: 1rem;
+    height: 0.125rem;
+    background-color: #ffffff;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+  }
+}
+.footer {
+  background-color: #1A27C9;
+  font-family: "Thunder-Lc", san-serif;
+  color: white;
+  padding: clamp(5rem, 3.8967rem + 4.9037vw, 8.31rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+}
+.footer__top__title {
+  padding-top: clamp(0.93rem, 0.5967rem + 1.4815vw, 1.93rem);
+  line-height: 4rem;
+}
+.footer__form {
+  padding-top: clamp(2.06rem, 0.52rem + 6.8444vw, 6.68rem);
+  max-width: 1450px;
+}
+.footer__form__elements {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: clamp(1.3rem, -2.975rem + 19vw, 7rem);
+  flex-wrap: wrap;
+}
+.footer__form__elements label {
+  font-size: clamp(0.875rem, 0.5938rem + 1.25vw, 1.25rem);
+}
+.footer__form__elements input, .footer__form__elements textarea {
+  border: none;
+  border-bottom: 1px solid white;
+  width: clamp(11.31rem, 5.22rem + 27.0667vw, 19.43rem);
+  color: white;
+  font-size: 1rem;
+}
+.footer__form__elements__name, .footer__form__elements__tipo, .footer__form__elements__email {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.footer__form__elements__mensaje input {
+  margin-top: clamp(1.43rem, 1.18rem + 1.1111vw, 2.18rem);
+  background-color: white;
+  color: black;
+  width: 16rem;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.footer__form__elements textarea {
+  height: 5rem;
+}
+.footer__info {
+  padding-top: clamp(4rem, 0.25rem + 16.6667vw, 9rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 32rem));
+  gap: 1rem;
+}
+.footer__info__text {
+  font-size: 1rem;
+}
+.footer__info__politicas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.footer__info__dir {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.footer__info__redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.footer__info__redes__img {
+  max-width: 1.55rem;
+}
+
+@media screen and (max-width: 815px) {
+  .footer__info__dir, .footer__info__redes {
+    justify-content: left;
+  }
+}
+.equipo {
+  padding: clamp(4rem, 2rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+  padding-bottom: clamp(7rem, 5.8767rem + 4.9926vw, 10.37rem);
+}
+.equipo__top {
+  padding-bottom: clamp(1.5rem, 0.5rem + 4.4444vw, 4.5rem);
+}
+.equipo__top__title {
+  line-height: 2rem;
+}
+.equipo__top__texto {
+  padding-top: clamp(0.8rem, 0.2333rem + 2.5185vw, 2.5rem);
+  width: clamp(14.87rem, 7.37rem + 33.3333vw, 37.37rem);
+}
+.equipo__profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 26.94rem));
+  gap: clamp(1.75rem, 0.8333rem + 4.0741vw, 4.5rem);
+  padding: 0 clamp(0rem, -2.56rem + 11.3778vw, 7.68rem);
+}
+.equipo__profile img {
+  width: clamp(14.87rem, 13.87rem + 4.4444vw, 17.87rem);
+}
+.equipo__profile__name {
+  padding-top: clamp(1.93rem, 1.7633rem + 0.7407vw, 2.43rem);
+  line-height: clamp(1rem, 0.3333rem + 2.963vw, 3rem);
+}
+.equipo__profile__desc {
+  color: #1A27C9;
+  width: clamp(15rem, 14rem + 4.4444vw, 18rem);
+}
+.equipo .card {
+  display: flex;
+  flex-direction: column;
+}

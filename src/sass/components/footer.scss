@@ -1,0 +1,118 @@
+@use "../base/colors" as c;
+@use "../base/font-faces" as ff;
+
+
+.footer{    
+    background-color: c.$color-blue-50;
+    font-family: "Thunder-Lc" , san-serif;
+    color: white;
+    padding: clamp(5rem, 3.8967rem + 4.9037vw, 8.31rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+
+    &__top{        
+
+        &__title{           
+            padding-top: clamp(0.93rem, 0.5967rem + 1.4815vw, 1.93rem);
+            line-height: 4rem;           
+        }
+
+    }
+
+    &__form{
+        padding-top: clamp(2.06rem, 0.5200rem + 6.8444vw, 6.68rem);
+        max-width: 1450px;
+
+        &__elements{
+
+            display: flex;            
+            flex-direction: row;            
+            align-items: flex-start;
+            gap: clamp(1.3rem, -2.9750rem + 19.0000vw, 7rem);            
+            flex-wrap: wrap;            
+
+            & label{
+                font-size: clamp(0.875rem, 0.5938rem + 1.2500vw, 1.25rem);
+            }
+
+            & input, & textarea{
+                border: none;
+                border-bottom: 1px solid white;
+                width: clamp(11.31rem, 5.2200rem + 27.0667vw, 19.43rem);
+                color: white;
+                font-size: 1rem;
+            }
+
+            &__name, &__tipo, &__email{                
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+            }
+
+            &__mensaje input{
+                margin-top: clamp(1.43rem, 1.1800rem + 1.1111vw, 2.18rem);
+                background-color: white;
+                color: black;
+                width: 16rem;
+                height: 3.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            & textarea{
+                height: 5rem;
+            }
+
+        }
+    }
+
+    &__info{                 
+        padding-top: clamp(4rem, 0.2500rem + 16.6667vw, 9rem);
+        display: grid;        
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 32rem));
+        gap: 1rem;                    
+        
+        &__text{
+        font-size: 1rem;                
+        }
+
+
+        &__politicas{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;            
+            gap: .5rem;
+        }
+
+        &__dir{
+                                                          
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;            
+            gap: .5rem;
+        }
+
+        &__redes{         
+           
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            gap: .5rem;
+
+            &__img{
+                max-width: 1.55rem;                                  
+            }
+
+        }
+
+    }
+   
+}
+
+@media screen and (max-width: 815px) {
+    .footer__info__dir, .footer__info__redes{
+        justify-content: left;
+    }
+}

@@ -1,0 +1,49 @@
+@use "../base/colors" as c;
+@use "../base/font-faces" as ff;
+
+.equipo{    
+    padding: clamp(4rem, 2.0000rem + 8.8889vw, 10rem) clamp(1.875rem, 0.2083rem + 7.4074vw, 6.875rem);
+    padding-bottom: clamp(7rem, 5.8767rem + 4.9926vw, 10.37rem);;
+
+    &__top{        
+        padding-bottom: clamp(1.5rem, 0.5000rem + 4.4444vw, 4.5rem);
+
+        &__title{
+            line-height: 2rem;
+        }
+
+        &__texto{
+            padding-top: clamp(0.8rem, 0.2333rem + 2.5185vw, 2.5rem);
+            width: clamp(14.87rem, 7.3700rem + 33.3333vw, 37.37rem);
+        }
+
+    }
+
+    &__profile{
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 26.94rem));
+        gap: clamp(1.75rem, 0.8333rem + 4.0741vw, 4.5rem);;
+        padding: 0 clamp(0rem, -2.5600rem + 11.3778vw, 7.68rem);;
+
+        & img{
+            width: clamp(14.87rem, 13.8700rem + 4.4444vw, 17.87rem);                    
+        }
+
+        &__name{
+            padding-top: clamp(1.93rem, 1.7633rem + 0.7407vw, 2.43rem);
+            line-height: clamp(1rem, 0.3333rem + 2.9630vw, 3rem);
+        }
+
+        &__desc{
+            color: c.$color-blue-50;
+            width: clamp(15rem, 14.0000rem + 4.4444vw, 18rem);
+        }
+
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;        
+    }
+}
