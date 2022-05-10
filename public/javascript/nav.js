@@ -1,15 +1,16 @@
-const navLines = document.querySelector(".nav__lines");
-const navLinesX = document.querySelector(".nav__linesX"); 
-const navMobileList = document.querySelector(".nav__mobile");  
+const navLinks = document.querySelector(".nav__links");
+const navX = document.querySelector(".nav__list__elementx"); 
+const navToggle = document.querySelector(".nav__toggle");
 
-openMenu (){  
-    navLines.style.display = "none";
-    navLinesX.style.display = "flex";     
-    navMobileList.style.display = "flex";
- }
- 
- closeMenu (){ 
-    navLines.style.display = "flex";
-    navLinesX.style.display = "none";     
-    navMobileList.style.display = "none";
- }
+navToggle.addEventListener("click", function(){
+   navToggle.style.display = "none";
+   navX.style.display = "flex";     
+   navLinks.style.display = "flex";
+});
+
+navX.addEventListener("click", function(){
+   navToggle.style.display = "flex";
+   navX.style.display = "none";     
+   navLinks.style.display = "none";
+});
+
