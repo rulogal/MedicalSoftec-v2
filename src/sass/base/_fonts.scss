@@ -10,6 +10,7 @@ $Thunder-BlackLc:"Thunder-BlackLc" , san-serif;
 $Thunder-ExtraBoldLc:"Thunder-ExtraBoldLc" , san-serif;
 $Thunder-Lc:"Thunder-Lc" , san-serif;
 $Thunder-LightLc:"Thunder-LightLc" , san-serif;
+$Thunder-BoldLc: "Thunder-BoldLc", san-serif;
 
 body {
     min-height  : 100vh;
@@ -23,7 +24,7 @@ body {
     }
 
 h1{
-    font-family: $Thunder-BlackLc;
+    font-family: $Thunder-ExtraBoldLc;
     font-size: clamp(1.84375rem, -0.1458rem + 8.8426vw, 7.8125rem);
 }
 
@@ -39,7 +40,7 @@ h3{
 }
 
 p, span{
-    font-family: $Thunder-LightLc;
+    font-family: $Thunder-Lc;
     font-size: clamp(0.875rem, 0.7500rem + 0.5556vw, 1.25rem);
     
 }
