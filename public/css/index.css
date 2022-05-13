@@ -374,7 +374,7 @@ p, span {
 .equipo .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .equipo .card Marquee {
   display: none;
