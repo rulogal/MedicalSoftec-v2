@@ -6,7 +6,12 @@
 
 @use "components/nav";
 @use "components/footer";
+
+//Index Page
 @use "components/equipo";
 @use "components/proceso";
 @use "components/hero";
 @use "components/proyectos";
+
+//Contacto Page
+@use "components/contacto-hero.scss";
