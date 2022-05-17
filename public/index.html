@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css"> 
     <script defer src="/public/js/proyectos.js"></script>  
-    <script defer src="/public/js/nav.js"></script> 
+    <script defer src="/public/js/nav.js"></script>      
     <title>Medical Softec | Lideres desde 1992.</title>
 </head>
 <body>
     
     <nav class="nav">
         <div class="nav__brand">
-            
-            <a href="./index.html" class="nav__brand__text">TEConsultas</a>
+            <img class="nav__brand__img" src="/src/assets/img/logo.jpeg" alt="">            
         
         </div>
 
@@ -186,26 +185,26 @@
 
         <div class="footer__form">
 
-            <form class="footer__form__elements">
+            <form class="footer__form__elements" onsubmit="sendEmail(); reset(); return false;">
 
                 <div class="footer__form__elements__name">
                     <label for="name">Nombre: </label>
-                    <input type="text" name="name">
+                    <input class="name" type="text" name="name">
                 </div>
 
                 <div class="footer__form__elements__tipo">
                     <label for="tipo">Tipo de proyecto: </label>
-                    <input type="text" name="tipo">
+                    <input class="tipo" type="text" name="tipo">
                 </div>
 
                 <div class="footer__form__elements__email">
                     <label for="email">Email: </label>
-                    <input type="email" name="email">
+                    <input class="email" type="email" name="email">
                 </div>
 
                 <div class="footer__form__elements__mensaje">
                     <label for="mensaje">Mensaje: </label>
-                    <textarea></textarea>
+                    <textarea class="msg"></textarea>
                     <input type="submit" value="Mandar Mensaje">                    
                 </div>
 
@@ -236,5 +235,35 @@
         </div>
 
     </footer>
+
+    <script  src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+ 
+        function sendEmail(){
+
+            const form = document.querySelector(".footer__form__elements"),
+                name = document.querySelector(".name"),
+                email = document.querySelector(".email"),
+                tipo = document.querySelector(".tipo"),
+                msg = document.querySelector(".msg");
+
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "raulgasa97@gmail.com",
+                Password : "E00E6EAC150085825D375223B4B7DD3FCBD2",
+                //Es el unico que se edita.
+                To : "teconsultas.medicalsoftec@gmail.com",
+                From : "raulgasa97@gmail.com",
+                Subject : "Solicitacion de cotizacion desde formulario",
+                Body : "<b>Nombre:</b> " + name.value + " <br><br> " + 
+                       "<b>Email:</b> "  + email.value + " <br><br> " + 
+                       "<b>Tipo de proyecto:</b> " + tipo.value +  " <br><br>" + 
+                       "VMensaje:</b> " + msg.value
+            }).then(
+            message => alert(message)
+            );
+        }
+
+    </script>
 </body>
 </html>
